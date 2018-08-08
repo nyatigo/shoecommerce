@@ -1,38 +1,52 @@
-var models = [
+ var tittle = document.createElement("h4");
+ tittle.innerText = "Our Inventory";
+ document.body.appendChild(tittle);
+ tittle.style.textAlign = "center"
 
-{
-  name:"GT350R",
-  image:"img/3.jpg",
-  price:"$64,740",
-  info:"The GT350 Track Attack is a complimentary high-performance driving experience for Shelby® GT350/GT350R owners. This one-day event is designed to build the high-performance driving skills that will help you get the most out of your new GT350/GT350R. For more information, just go to www.gt350trackattack.com or call 435-27-SPEED to register."
-  
-},
+ function shoes(image,name,color,size,price){
+ 	this.image = image;
+ 	this.name = name;
+ 	this.color = color;
+ 	this.size = size;
+ 	this.price = price;
+    
+    var div = document.createElement("div");
+ 	var image = document.createElement("img");
+ 	var name = document.createElement("h6");
+ 	var color = document.createElement("p");
+ 	var size = document.createElement("p");
+ 	var price = document.createElement("p");
 
-{
-  name:"GT",
-  image:"img/5.jpg",
-  price:"$35,190",
-  info:"Move like a legend.The 2017 Ford Mustang is a high performance, sport coupe that competes with the Chevrolet Camaro and Dodge Challenger. Traditionally, the Mustang has been an enduring symbol for muscle car enthusiasts. The Shelby GT350 will be covered in a separate overview. "
-  
-}
+ 	image.src = this.image;
+ 	name.innerText = this.name;
+ 	color.innerText = "color:"+this.color;
+ 	size.innerText = "size:"+this.size;
+ 	price.innerText =  "$" + this.price;
 
-];
 
-function fun(){
-  var input = document.getElementById("input").value
-  var h1 = document.getElementById("name")
-  var image = document.getElementById("img")
-  var h5 = document.getElementById("price")
-  var p = document.getElementById("para")
-  for(var i = 0 ; i < models.length ; i++){
-    if(input == models[i].name){
-      h1.innerHTML = models[i].name
-      image.src= models[i].image
-      h5.innerHTML = models[i].price
-      p.innerHTML = models[i].info
-      m.innerHTML = models[i].m
+   div.className = "col-4 bg-secondary text-white text m-3" 
+   div.style.boxshadow = "-10px 15px 10px black";
+   div.style.display = "inline-block"
 
-    }
-  }
 
-}
+ 	div.appendChild(image);
+ 	div.appendChild(name);
+ 	div.appendChild(color);
+ 	div.appendChild(size);
+ 	div.appendChild(price);
+ 	document.body.appendChild(div);
+
+ 	var colors = ["red","blue","green"];
+
+ 	for(var i = 0 ; i < colors.length; i++){
+ 		if(this.color == colors[i]){
+ 			name.style.color = colors[i]
+ 		}
+ 	}
+
+
+
+ }
+
+ new shoes("img/redT.jpg","Timberland classic jacquar","red","10.5",139.99)
+ new shoes("img/blueT.jpg","Nubuck Leather Timberland Men","blue","9",79.99)

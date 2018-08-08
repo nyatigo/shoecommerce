@@ -1,4 +1,4 @@
-body {
+/* body {
 	background-image: url("../img/mus.jpg");
 	background-repeat: no-repeat;
 	background-size:cover;
@@ -7,7 +7,7 @@ body {
 	text-align:center;
 }
 
-h1{
+ h1{
 	color:white;
 	font-family: 'Pacifico', cursive;
 }
@@ -38,4 +38,11 @@ color:white;
 
 #img{
 	width:200px;
+}
+
+*/
+
+img{
+	width:200px;
+	background-color: black;
 }
